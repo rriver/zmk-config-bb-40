@@ -1,16 +1,3 @@
-if SHIELD_BB_40_LEFT
-
-config ZMK_KEYBOARD_NAME
-    default "bb-40-test"
-
-config ZMK_BLE
-    default y
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif
-
 if SHIELD_BB_40_RIGHT
 
 config ZMK_KEYBOARD_NAME
@@ -19,8 +6,8 @@ config ZMK_KEYBOARD_NAME
 config ZMK_BLE
     default y
 
-# config ZMK_SPLIT_ROLE_CENTRAL
-#    default y
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 config INPUT
     default y
