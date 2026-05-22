@@ -40,8 +40,9 @@
 };
 
 
-&xiao_spi {
+&spi0 {
     status = "okay";
+    compatible = "nordic,nrf-spim";
 
     pinctrl-0 = <&trackball_spi_default>;
     pinctrl-1 = <&trackball_spi_sleep>;
@@ -49,7 +50,7 @@
 
     cs-gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;  /* D7 / P1.12 / CS */
 
-    trackball_sensor: paw3222@0 {
+    trackball_sensor: trackball_sensor@0 {
         status = "okay";
         compatible = "pixart,paw3222";  /* トラボセンサ用のドライバとバインド */
         reg = <0>;
