@@ -8,6 +8,7 @@
 
 #define MOUSE 5
 #define SCROLL 6
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
     flavor = "balanced";
@@ -60,16 +61,14 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <100>;
+            tap-ms = <20>;
         };
 
         scroll_right_left: scroll_right_left {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-
-            tap-ms = <100>;
+            tap-ms = <20>;
         };
     };
 
