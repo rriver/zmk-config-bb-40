@@ -106,7 +106,7 @@
 &trans      &trans            &trans              &trans            &trans            &trans                         &kp LS(LG(SPACE))          &kp LA(SPACE)     &trans             &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_3 {
