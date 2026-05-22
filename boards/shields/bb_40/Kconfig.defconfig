@@ -9,14 +9,14 @@ config ZMK_BLE
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-#config ZMK_POINTING
-#    default y
+config ZMK_POINTING
+    default y
 
-#config SPI
-#    default y
+config SPI
+    default y
 
-#config PAW3222
-#    default y
+config PAW3222
+    default y
 
 endif #SHIELD_BB_40_RIGHT
 
