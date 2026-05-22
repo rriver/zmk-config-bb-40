@@ -84,7 +84,7 @@
 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &lt_to_layer_0 1 LANGUAGE_2  &lt 2 BACKSPACE  &lt 3 DELETE         &lt 3 SPACE  &lt_to_layer_0 1 LANG1  &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &lt 4 LEFT_ALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_1 {
