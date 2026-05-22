@@ -62,7 +62,7 @@
 
 // Overrides for the input listener node
 &trackball_central_listener {
-    status = "okay";
+    status = "disabled";
     device = <&trackball_sensor>;
 
     /* レイヤー3：横スクロールを実質無効化（=縦のみ） */
