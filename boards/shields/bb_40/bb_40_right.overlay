@@ -41,7 +41,7 @@
 
 
 &spi0 {
-    status = "okay";
+    status = "disabled";
     compatible = "nordic,nrf-spim";
 
     pinctrl-0 = <&trackball_spi_default>;
@@ -51,7 +51,7 @@
     cs-gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;  /* D7 / P1.12 / CS */
 
     trackball_sensor: trackball_sensor@0 {
-        status = "okay";
+        status = "disabled";
         compatible = "pixart,paw3222";  /* トラボセンサ用のドライバとバインド */
         reg = <0>;
         spi-max-frequency = <2000000>;

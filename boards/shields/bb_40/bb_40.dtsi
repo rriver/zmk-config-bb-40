@@ -30,8 +30,7 @@
     trackball_central_listener: trackball_central_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-        input-processors = 
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;         //Y軸反転
+        input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;         //Y軸反転
     };
 
     left_encoder: encoder_left {
@@ -42,13 +41,9 @@
         status = "disabled";
     };
 
-    right_encoder: encoder_right {
-        status = "disabled";
-    };
-
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder &right_encoder>;
+        sensors = <&left_encoder>;
         triggers-per-rotation = <10>;
     };
 };
