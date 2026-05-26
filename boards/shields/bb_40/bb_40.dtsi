@@ -33,7 +33,7 @@
         status = "disabled";
         input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, //Y軸反転
                            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>, //X軸反転
-                           <&zip_y_scaler 10 3>; // Y軸をスケール
+                           <&zip_y_scaler 8 3>; // Y軸をスケール
     };
 
     left_encoder: encoder_left {
