@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <mouse-gesture.dtsi>
 
 #define MOUSE 5
 #define SCROLL 6
@@ -147,4 +148,37 @@
             sensor-bindings = <&scroll_up_down>;
         };
     };
+};
+
+&zip_mouse_gesture {
+    stroke-size = <250>;
+    idle-timeout-ms = <150>;
+    gesture-cooldown-ms = <500>;
+    enable-eager-mode;
+
+    mission_control {
+        pattern = <GESTURE_UP>;
+        bindings = <&kp LC(UP)>;      // Mission Control
+    };
+
+    app_expose {
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp LC(DOWN)>;    // App Exposé
+    };
+
+    desktop_left {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LC(LEFT)>;    // 左のデスクトップへ
+    };
+
+    desktop_right {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&kp LC(RIGHT)>;   // 右のデスクトップへ
+    };
+
+    show_desktop {
+        pattern = <GESTURE_DOWN GESTURE_UP>;
+        bindings = <&kp LG(F3)>;      // デスクトップ表示系。Mac設定次第で要調整
+    };
+
 };
