@@ -22,6 +22,10 @@
     flavor = "balanced";
 };
 
+&mouse_gesture_kp {
+    tapping-term-ms = <200>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
