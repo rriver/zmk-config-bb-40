@@ -155,9 +155,8 @@
 };
 
 &zip_mouse_gesture {
-    stroke-size = <250>;
-    idle-timeout-ms = <150>;
-    gesture-cooldown-ms = <500>;
+    stroke-size = <200>;
+    idle-timeout-ms = <0>;
     enable-eager-mode;
 
     mission_control {
