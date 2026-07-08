@@ -7,8 +7,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define MOUSE 5
-#define SCROLL 6
+#define LAYER_TENKEY 5
+#define LAYER_SCROLL 6
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &mt {
@@ -36,6 +36,14 @@
         Caps_Lock {
             bindings = <&kp CAPSLOCK>;
             key-positions = <0 1>;
+        };
+
+        combo_mouse_gesture {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            layers = <0>;
+            bindings = <&mouse_gesture>;
+            slow-release;
         };
     };
 
@@ -133,7 +141,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        TENKEY {
+        layer_tenkey {
             bindings = <
 &trans  &trans    &trans    &trans    &trans          &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
 &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans          &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
@@ -144,7 +152,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        SCROLL {
+        layer_scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
